@@ -16,13 +16,20 @@
         margin-top: 5vh;
         width: 32px;
         transition: .5s ease opacity;
+        cursor: pointer;
     }
     .menu {
         display: none;
         opacity: 0;
+        &:hover {
+            filter: $blue-filter;
+        }
     }
     .close {
         filter: $white-filter;
+        &:hover {
+            filter: $yellow-filter;
+        }
     }
 }
 
@@ -42,11 +49,19 @@
     .nav-item {
         margin-bottom: 1em;
         padding: 1em;
+        cursor: pointer;
+        &:hover {
+            background-color: $clr-light-secondary;
+            border-radius: 1em 0em 1em 0em;
+        }
     }
     .active {
         background-color: $clr-primary;
         color: $clr-secondary;
         border-radius: 1em 0em 1em 0em;
+        &:hover {
+            background-color: $clr-primary;
+        }
     }
 }
 
@@ -76,6 +91,10 @@
     img {
         filter: $white-filter;
         width: 32px;
+        cursor: pointer;
+        &:hover {
+            filter: $yellow-filter;
+        }
     }
 }
 
