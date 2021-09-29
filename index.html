@@ -17,8 +17,8 @@
         <nav class="navbar">
             <img class="close" src="images/icons/close.svg" alt="close" onclick="isNavClosing(true)">
             <ul class="nav-list main">
-                <h2 class="nav-item active">Profile</h2>
-                <h2 class="nav-item">Projects</h2>
+                <h2 class="nav-item active" onclick="switchSection(0)">Profile</h2>
+                <h2 class="nav-item" onclick="switchSection(1)">Projects </h2>
             </ul>
             <ul class="nav-list content">
                 <img class="profile-picture" src="images/temp-pic.svg" alt="profile picture">
@@ -36,6 +36,9 @@
             <div class="profile">
                 <h1><span class="highlight">John</span> Phillips</h1>
             </div>
+        </section>
+        <section class="project-section">
+            <h2>Hello World</h2>
         </section>
     </main>
 </body>
