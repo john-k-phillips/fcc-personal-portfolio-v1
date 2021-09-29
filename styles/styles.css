@@ -55,7 +55,7 @@
           filter: invert(51%) sepia(86%) saturate(5512%) hue-rotate(227deg) brightness(100%) contrast(102%);
 }
 
-.section-content, .nav-list {
+.section-content, .project-section, .nav-list {
   -webkit-transition: .7s ease transform;
   transition: .7s ease transform;
 }
@@ -225,6 +225,18 @@
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+}
+
+.project-section {
+  width: 100%;
+  margin-top: 10vh;
+  display: none;
+  -webkit-transform: translateX("-768px");
+          transform: translateX("-768px");
+}
+
+.project-section .projects {
+  text-align: center;
 }
 
 *,
