@@ -156,6 +156,7 @@
     height: 100%;
     width: 30%;
     margin-right: 10%;
+    font-size: 1.4em;
   }
   .navbar .nav-list {
     display: -webkit-box;
