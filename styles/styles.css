@@ -229,13 +229,14 @@
 
 .project-section {
   width: 100%;
-  margin-top: 10vh;
   display: none;
-  -webkit-transform: translateX("-768px");
-          transform: translateX("-768px");
+  -webkit-transform: translateX(-1000px);
+          transform: translateX(-1000px);
+  background-color: rgba(117, 124, 255, 0.603);
 }
 
 .project-section .projects {
+  margin: 10vh 0vh;
   text-align: center;
 }
 

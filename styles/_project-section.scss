@@ -1,9 +1,11 @@
 .project-section {
     width: 100%;
-    margin-top: 10vh;
     display: none;
-    transform: translateX('-768px');
+    transform:translateX(-1000px);
+
+    background-color: hsla(237, 100%, 73%, 0.603);
     .projects {
+        margin: 10vh 0vh;
         text-align: center;
     }
 }
