@@ -72,4 +72,27 @@ const switchSection = (value) => {
             mainNav[value - 1].classList.remove('active');
         }
     }
+    desktopSwitch(value);
+}
+
+const desktopSwitch = (value) => {
+    if (value === 0) {
+        projectSection.style.transform = "translateX(-1500px)"
+        setTimeout(() => {
+            projectSection.style.display = 'none';
+            profileSection.style.display = 'block';
+        }, 500)
+        setTimeout(() => {
+            profileSection.style.transform = "translateX(0px)"
+        }, 700);
+    } else {
+        profileSection.style.transform = "translateX(-1500px)"
+        setTimeout(() => {
+            profileSection.style.display = 'none';
+            projectSection.style.display = 'block';
+        }, 500)
+        setTimeout(() => {
+            projectSection.style.transform = "translateX(0px)"
+        }, 700);
+    }
 }
