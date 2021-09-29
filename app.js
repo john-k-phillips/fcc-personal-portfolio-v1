@@ -1,44 +1,47 @@
 const isNavClosing = (bool) => {
     const navbar = document.querySelector('.navbar');
+    const navLists = document.querySelectorAll('.nav-list');
+
     const crossIcon = document.querySelector('.close');
     const menuIcon = document.querySelector('.menu');
-    const navLists = document.querySelectorAll('.nav-list');
+
     const sectionContent = document.querySelector('.section-content');
 
     if (bool) {
+        // IS THE NAV CLOSING?
         navbar.style.height = '0px';
-
-        navLists.forEach(element => {
-            element.style.transform = 'translateX(-768px)';
-        });
-
         setTimeout(() => {
-            crossIcon.style.opacity = '0'
+            crossIcon.style.opacity = '0';
+            sectionContent.style.display = 'block';
             menuIcon.style.display = 'block';
-            setTimeout(() => {
-                crossIcon.style.display = 'none';
-                menuIcon.style.opacity = '1'
-
-            }, 700)
-        }, 500)
-        sectionContent.style.display = 'block';
+            navLists.forEach(item => {
+                item.style.transform = 'translateX(-768px)';
+            })
+        }, 500);
+        setTimeout(() => {
+            navbar.style.display = 'none';
+            menuIcon.style.opacity = '1';
+            sectionContent.style.transform = 'translateX(0px)';
+        }, 1500);
     } else {
+        // THE NAV IS OPENING!
         sectionContent.style.transform = 'translateX(-768px)';
-        navbar.style.height = '100vh';
+        menuIcon.style.opacity = '0';
+        navLists.forEach(item => {
+            item.style.display = 'flex';
+        })
+        navbar.style.display = 'flex';
+        setTimeout(() => {
+            navbar.style.height = '100vh'
 
+        }, 10);
         setTimeout(() => {
-            menuIcon.style.opacity = '0';
-        }, 200)
-        setTimeout(() => {
+            crossIcon.style.opacity = '1';
             sectionContent.style.display = 'none';
-            setTimeout(() => {
-                menuIcon.style.display = 'none';
-                crossIcon.style.display = 'block';
-                crossIcon.style.opacity = '1';
-                navLists.forEach(element => {
-                    element.style.transform = 'translateX(0px)';
-                });
-            }, 700)
-        }, 500)
+            navLists.forEach(item => {
+                item.style.transform = 'translateX(0px)';
+            })
+            menuIcon.style.display = 'none';
+        }, 500);
     }
 }
