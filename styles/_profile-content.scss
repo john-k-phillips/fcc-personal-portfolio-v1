@@ -1,13 +1,39 @@
 .section-content {
-    width: 60%;
+    width: 100%;
+    margin-top: 10vh;
     .profile {
         width: 100%;
         height: 100%;
-        display: grid;
-        place-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         h1 {
+            position: relative;
             text-transform: uppercase;
-            font-size: clamp(4em, 6.5vw, 8em);
+            color: $clr-black;
+            font-size: clamp(2em, 6.5vw, 8em);
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 4px;
+                background-color: $clr-secondary;
+                padding-bottom: .2em;
+                position: absolute;
+            }
         }
-    }
+        .highlight {
+            color: $clr-primary;
+            background-color: $clr-secondary;
+            padding: .2em .6em;
+        }  
+    }   
+}
+
+@media screen and (min-width: 1024px) {
+   .section-content {
+       .profile {
+           justify-content: flex-start;
+       }
+   }
 }
