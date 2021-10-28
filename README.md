@@ -17,7 +17,9 @@ freeCodeCamp is a non-profit organization that consists of an interactive learni
 
 <h2>Overview</h2>
 <p>
- This was my first portfolio design and although it may not seem like much, it was a great accomplishment for myself. Over the course of my journey I have struggled to create a portfolio that I am satisfied with.
+ This was my first portfolio design and although it may not seem like much, it was a great accomplishment for myself. 
+ 
+ Over the course of my journey I have struggled to create a portfolio that I am satisfied with.
 
 This portfolio quickly got replaced, but despite this. I'm happy with the animation and overall result of the page!
 </p>
